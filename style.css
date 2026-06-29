@@ -1,0 +1,230 @@
+/* ==========================================================================
+   1. VARIÁVEIS DE DESIGN (DESIGN SYSTEM)
+   ========================================================================== */
+:root {
+    /* Paleta de Cores Base (Focada em Natureza e Tecnologia) */
+    --verde-escuro: #2e7d32;   /* Cor principal do campo */
+    --verde-claro: #4caf50;    /* Detalhes de brotos e botões */
+    --laranja-sol: #ff9800;    /* Destaques importantes e ações */
+    --marrom-terra: #5d4037;   /* Cor forte para títulos principais */
+    
+    /* Cores de Superfície */
+    --cor-fundo: #f1f8e9;         /* Fundo suave para não cansar os olhos */
+    --cor-card: #ffffff;          /* Fundo dos blocos de conteúdo */
+    --cor-texto: #333333;         /* Texto de leitura principal */
+    --cor-texto-mutado: #616161;  /* Textos de suporte e descrições */
+    
+    /* Efeitos Visuais */
+    --sombra-card: 0 8px 24px rgba(0, 0, 0, 0.04);
+    --sombra-hover: 0 16px 32px rgba(46, 125, 50, 0.12);
+    --borda-raio: 16px;
+    --transicao-suave: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   2. RESET E CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Garante que os links âncora rolem suavemente */
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   3. COMPONENTES PADRONIZADOS (BOTÕES)
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    background-color: var(--laranja-sol);
+    color: white;
+    padding: 0.9rem 2.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    box-shadow: 0 6px 16px rgba(255, 152, 0, 0.3);
+    transition: var(--transicao-suave);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e68a00;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(255, 152, 0, 0.4);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   4. ESTRUTURA DO LAYOUT (SEÇÕES)
+   ========================================================================== */
+
+/* Cabeçalho de Navegação */
+.header-principal {
+    background-color: var(--verde-escuro);
+    color: white;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-principal .logo {
+    font-size: 1.8rem;
+    color: var(--laranja-sol);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.menu-navegacao a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.8rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: var(--transicao-suave);
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.menu-navegacao a:hover {
+    color: var(--laranja-sol);
+    border-bottom: 2px solid var(--laranja-sol);
+}
+
+/* Banner de Destaque (Hero) */
+.hero-banner {
+    background: linear-gradient(135deg, #c8e6c9 0%, #e8f5e9 100%);
+    text-align: center;
+    padding: 6rem 1.5rem;
+    border-bottom: 6px solid var(--verde-claro);
+}
+
+.hero-banner h2 {
+    font-size: 3rem;
+    color: var(--marrom-terra);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.hero-banner p {
+    font-size: 1.3rem;
+    max-width: 750px;
+    margin: 0 auto 2.5rem;
+    color: var(--cor-texto-mutado);
+}
+
+/* Área de Cards (Grid Responsivo) */
+.grid-recursos {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.card-item {
+    background-color: var(--cor-card);
+    padding: 3rem 2rem;
+    border-radius: var(--borda-raio);
+    box-shadow: var(--sombra-card);
+    text-align: center;
+    border-top: 6px solid var(--verde-claro);
+    transition: var(--transicao-suave);
+}
+
+.card-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-hover);
+}
+
+.card-item h3 {
+    color: var(--verde-escuro);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.card-item p {
+    color: var(--cor-texto-mutado);
+    font-size: 1rem;
+}
+
+/* Rodapé Final */
+.footer-principal {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    margin-top: 6rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   5. RESPONSIVIDADE (ADAPTAÇÃO PARA CELULARES e TABLETS)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-principal {
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .menu-navegacao {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .menu-navegacao a {
+        margin-left: 0;
+        font-size: 1rem;
+    }
+
+    .hero-banner {
+        padding: 4rem 1rem;
+    }
+
+    .hero-banner h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-banner p {
+        font-size: 1.15rem;
+    }
+
+    .grid-recursos {
+        margin: 3rem auto;
+        gap: 1.5rem;
+    }
+    
+    .card-item {
+        padding: 2rem 1.5rem;
+    }
+}

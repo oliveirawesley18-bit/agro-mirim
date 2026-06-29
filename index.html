@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Mirim — O Futuro do Campo</title>
+    <!-- Vínculo com a folha de estilo principal (index.css) -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal e Navegação -->
+    <header class="header-principal">
+        <div class="logo">
+            <span>🌱</span> Agro Mirim
+        </div>
+        <nav class="menu-navegacao">
+            <a href="#inicio">Início</a>
+            <a href="#aprender">Aprender</a>
+            <a href="#jogos">Jogos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal (Hero Section) -->
+    <section class="hero-banner" id="inicio">
+        <h2>Cultivando o Conhecimento!</h2>
+        <p>Aprenda sobre a força do campo, cultivo sustentável e tecnologia agrícola de um jeito fácil, interativo e muito divertido.</p>
+        <a href="#aprender" class="btn">Começar Aventura</a>
+    </section>
+
+    <!-- Conteúdo Principal / Grid de Recursos -->
+    <main class="grid-recursos" id="aprender">
+        
+        <!-- Card 1: Tecnologia -->
+        <article class="card-item">
+            <h3>🚜 Mini Tecnologia</h3>
+            <p>Descubra como drones, tratores inteligentes e robôs avançados ajudam os produtores a monitorar e cuidar das plantações todos os dias.</p>
+        </article>
+
+        <!-- Card 2: Cultivo Doméstico -->
+        <article class="card-item">
+            <h3>💧 Horta em Casa</h3>
+            <p>Aprenda o passo a passo prático para plantar suas próprias verduras, legumes saudáveis e temperos na sua casa ou apartamento.</p>
+        </article>
+
+        <!-- Card 3: Ecologia -->
+        <article class="card-item">
+            <h3>🌍 Sustentabilidade</h3>
+            <p>Entenda a real importância de proteger a água, o solo e as florestas nativas para garantir o alimento de todo o nosso futuro.</p>
+        </article>
+
+    </main>
+
+    <!-- Seção de Contato / Inscrição -->
+    <section id="contato" style="max-width: 600px; margin: 4rem auto; padding: 2rem; text-align: center;">
+        <h2 style="color: var(--cor-titulo); margin-bottom: 1rem;">Quer receber novidades?</h2>
+        <p style="margin-bottom: 1.5rem; color: var(--cor-texto-suave);">Fique por dentro de novas missões, jogos e dicas de cultivo orgânico!</p>
+        <form onsubmit="event.preventDefault(); alert('Inscrição realizada com sucesso! 🌱');" style="display: flex; gap: 0.5rem; justify-content: center;">
+            <input type="email" placeholder="Seu melhor e-mail" required style="padding: 0.8rem 1rem; border: 2px solid var(--cor-secundaria); border-radius: 25px; outline: none; flex: 1; max-width: 300px;">
+            <button type="submit" class="btn" style="padding: 0.8rem 1.5rem;">Assinar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé da Página -->
+    <footer class="footer-principal">
+        <p>&copy; 2026 Agro Mirim — Educando as novas gerações para um agronegócio tecnológico e sustentável.</p>
+    </footer>
+
+    <!-- Vínculo com a lógica de interatividade (script.js) -->
+    <script src="script.js"></script>
+</body>
+</html>
