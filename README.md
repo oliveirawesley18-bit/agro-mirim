@@ -1,2 +1,2 @@
 # agro-mirim
-Produção Consciente é um projeto que promove a agricultura sustentável, preservando o meio ambiente e incentivando o uso responsável dos recursos naturais.
+Agro mirim é um projeto voltado para o público infantil usando uma metodologia dinâmica com lionguagem apropriada para as crianças
