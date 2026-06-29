@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Mirim - O Futuro do Campo</title>
+    <style>
+        /* Estilos Globais */
+        :root {
+            --verde-escuro: #2e7d32;
+            --verde-claro: #4caf50;
+            --laranja: #ff9800;
+            --fundo: #f1f8e9;
+            --texto: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--fundo);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--verde-escuro);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--laranja);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--laranja);
+        }
+
+        /* Banner Principal */
+        .hero {
+            background-color: #c8e6c9;
+            text-align: center;
+            padding: 4rem 2rem;
+            border-bottom: 5px solid var(--verde-claro);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: var(--verde-escuro);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            background-color: var(--laranja);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Seção de Recursos/Cards */
+        .recursos {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 5px solid var(--verde-claro);
+        }
+
+        .card h3 {
+            color: var(--verde-escuro);
+            margin-top: 0;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin-top: 1rem;
+            }
+            nav a {
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>🌱 Agro Mirim</h1>
+        </div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#aprender">Aprender</a>
+            <a href="#jogos">Jogos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero" id="inicio">
+        <h2>Cultivando o Conhecimento!</h2>
+        <p>Aprenda sobre a força do campo, cultivo sustentável e tecnologia agrícola de um jeito fácil e muito divertido.</p>
+        <a href="#aprender" class="btn">Começar Aventura</a>
+    </section>
+
+    <!-- Seção de Conteúdo -->
+    <main class="recursos" id="aprender">
+        <div class="card">
+            <h3>🚜 Mini Tecnologia</h3>
+            <p>Descubra como drones, tratores inteligentes e robôs ajudam os produtores a cuidar das plantações todos os dias.</p>
+        </div>
+
+        <div class="card">
+            <h3>💧 Horta em Casa</h3>
+            <p>Aprenda o passo a passo para plantar suas próprias verduras, legumes e temperos na sua casa ou apartamento.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌍 Sustentabilidade</h3>
+            <p>Entenda a importância de proteger a água, o solo e as florestas para garantir o alimento do nosso futuro.</p>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Agro Mirim - Educando para o futuro do agronegócio sustentável.</p>
+    </footer>
+
+</body>
+</html>
