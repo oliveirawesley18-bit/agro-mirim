@@ -1,5 +1,4 @@
 # agro-mirim
-Agro mirim é um projeto voltado para o público infantil usando uma metodologia dinâmica com linguagem apropriada para as crianças
 # 🌱 Agro Mirim — O Futuro do Campo
 
 O **Agro Mirim** é uma plataforma web educativa desenvolvida para aproximar o público jovem e infantil do universo do agronegócio sustentável, da tecnologia no campo e do cultivo consciente. Através de uma interface visual atraente, interativa e de fácil navegação, o projeto ensina de maneira leve e divertida.
